@@ -50,6 +50,7 @@ test:
     - pip
 
 about:
+  home: https://anaconda.cloud
   summary: Download, launch, and integrate AI models curated by Anaconda
   license: BSD-3-Clause
   license_file: LICENSE
@@ -58,8 +59,6 @@ about:
     Download, launch, and integrate AI models curated by Anaconda
   doc_url: https://anaconda.cloud/docs/cli/commands/anaconda-ai.html
   dev_url: https://github.com/anaconda/anaconda-ai
-
-
 
 extra:
   recipe-maintainers:
