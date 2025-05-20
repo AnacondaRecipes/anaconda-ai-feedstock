@@ -10,19 +10,19 @@ source:
   sha256: c771d0f4af89bb11e999e40a9054e427652331d4a5a5dccd70a6ed8eb3d28832
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  skip: true #[py<39]
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - hatchling
     - hatch-vcs >=0.3
     - setuptools-scm >=7.1
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - anaconda-auth >=0.8
     - anaconda-cli-base >=0.5
     - rich
@@ -33,7 +33,6 @@ requirements:
     - platformdirs
     - packaging
     - click <8.2
-    - ruamel_yaml
   run_constrained:
     - langchain-openai >=0.2.8
     - llm >=0.22
@@ -47,15 +46,19 @@ test:
   commands:
     - pip check
   requires:
-    - python {{ python_min }}
     - pip
 
 about:
+  home: https://anaconda.cloud
   summary: Download, launch, and integrate AI models curated by Anaconda
   license: BSD-3-Clause
   license_file: LICENSE
-  home: https://anaconda.cloud
-  
+  license_family: BSD
+  description: |
+    Download, launch, and integrate AI models curated by Anaconda
+  doc_url: https://anaconda.cloud/docs/cli/commands/anaconda-ai.html
+  dev_url: https://github.com/anaconda/anaconda-ai
+
 extra:
   recipe-maintainers:
     - AlbertDeFusco
