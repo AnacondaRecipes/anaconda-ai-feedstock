@@ -32,7 +32,6 @@ requirements:
     - openai
     - platformdirs
     - packaging
-    - click <8.2
   run_constrained:
     - langchain-openai >=0.2.8
     - llm >=0.22
