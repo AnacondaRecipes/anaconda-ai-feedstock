@@ -49,6 +49,10 @@ test:
     - pip check
   requires:
     - pip
+    # 'anaconda-auth' depends on 'anaconda-anon-usage'
+    # 'anaconda-anon-usage' requires 'conda' installed
+    # Otherwise, 'pip check' test fails
+    - conda >=23.9.0
 
 about:
   home: https://anaconda.cloud
