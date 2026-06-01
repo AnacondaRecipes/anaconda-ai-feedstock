@@ -37,6 +37,7 @@ requirements:
     - llm >=0.22
     - mcp >=1.26
     - pydantic-ai >=1.50
+    - sagemaker-core >=2.0.0
 
 test:
   imports:
